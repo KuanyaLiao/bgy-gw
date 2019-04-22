@@ -1,0 +1,54 @@
+.container{
+    margin: 0;padding: 0;
+}
+.header{
+    background-color:#05931e !important;
+    width: 100%;
+    box-sizing: border-box;
+}
+.logo{
+    margin-left: 10px;
+}
+#content{
+    justify-content: center;
+    margin-left: 80px;
+}
+.header li a{
+    color: rgb(255, 255, 255) !important;
+    font-size: 18px;
+    /*line-height: 2.09em;*/
+    margin: 12px;
+}
+
+@media screen and (min-width: 992px){
+    .login_reg{
+
+        float:right;
+    }
+    .login_reg .login,.reg{
+        height:30px;width:80px;
+        /* font-size: 16px; */
+        float: right;
+
+        margin:35px 15px;
+        /* padding: 0px 0px; */
+        background-image: linear-gradient(to right, #fff 0,#fff 100%);
+        border-radius:15px;
+        color:#000;
+        text-decoration: none;
+        line-height: 30px;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:991px){
+    .login_reg{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .login_reg{
+        display: none;
+    }
+}

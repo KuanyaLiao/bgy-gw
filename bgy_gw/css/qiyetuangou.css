@@ -1,0 +1,55 @@
+.my_header, .my_footer{
+    width: 100%;
+}
+.area_bg{
+    height: 747px;
+    position: relative;
+}
+.bg_content{
+    background-image: url('../../bgy_img/qiyetuangou/46_jmbucq3g.jpeg');
+    background-repeat: no-repeat;
+
+    position:absolute;
+    /*background-position:50% 50%;*/
+    /*top: 200px;*/
+    background-size: cover;
+    width: 100%;height: 100%;
+}
+.bg_a{
+    margin-top: 10rem;
+}
+
+
+.lihe ul li img,.kaquan ul li img{
+    width: 300px;
+}
+.yewufanwei ul li div{
+    width: 300px;
+    height: 290px;
+}
+.yewufanwei ul li div img{
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+}
+.haochi ul li img,.haochi2 ul li img{
+    width: 50%;
+}
+.dakehuzhuanshu{
+    position: relative;
+    height: 500px;
+}
+.dakehu{
+    background-image: url("../../bgy_img/qiyetuangou/46_jciw1df5.JPG");
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size:cover;
+    width: 100%;
+    height:100%;
+}
+.dakehu ul li {
+    background-color:#efd6d6;
+}
+.dakehu ul li div div img{
+    width: 10%;
+}
