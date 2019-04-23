@@ -42,19 +42,7 @@
     @if $color == default {
         $color: map-get($tip,color);
     }
-    .yo-tip#{$name} {
-        @if $padding != map-get($tip, padding) {
-            padding: $padding;
-        }
-        @if $radius != map-get($tip, radius) {
-            border-radius: $radius;
-        }
-        @if $bgcolor != map-get($tip, bgcolor) {
-            background-color: rgba($bgcolor, .5);
-        }
-        @if $color != map-get($tip, color) {
-            color: $color;
-        }
+   
         // 增量扩展
         @content;
     }
