@@ -1,0 +1,135 @@
+<!-- 1.创建异步对象
+2.创建请求
+3.发送请求
+4.接受响应数据
+ -->
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+	</head>
+	<body>
+		<div>
+			<table align="center">	
+			<tr>
+				<td>会员类型：
+				<input type="radio" id="qy" value="0" name="member">
+				<label for="qy">企业会员</label>
+				<input type="radio" id="gr" value="1" name="member">
+				<label for="gr">个人会员</label>
+				</td>
+			</tr>
+			
+			<tr>
+				<td>会员名称：<input onblur="show()" type="txet" id="uname"></td>
+				<td><p id="p1"></p></td>
+			</tr>
+			<tr>
+				<td>登录密码：<input onblur="fn()" type="text" id="upwd"></td>
+				<td><p id="p2"></p></td>
+			</tr>
+			<tr>
+				<td>重复输入：<input onblur="cn()" type="text" id="upwd2"></td>
+				<td><p id="p3"></p></td>
+			</tr>
+			<tr>
+				<td><button onclick="reg()">立即注册</button></td>
+				<td></td>
+			</tr>
+		
+		</table>
+	
+		</div>
+		
+	
+			<script>
+				function show(){
+				
+					//验证用户名是否存在
+					var xhr=new XMLHttpRequest();
+					
+					console.log(2);
+					xhr.onreadystatechange=function(){
+				if (xhr.readyState==4&&xhr.status==200)
+				{
+					var result=xhr.responseText;
+					alert(result)
+				}
+					}
+						
+//					xhr.open("get","/user/isreg?="uname.value,true);
+//						
+//						console.log(2);
+//						xhr.send(null);
+//				}
+						xhr.open("post","/user/isreg",true);
+						xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+						var formdata="uname="+uname.value
+						console.log(2);
+						xhr.send(formdata);
+						
+					}
+
+
+
+				function fn(){
+					if (upwd.value=="")
+					{
+						p2.innerHTML="会员登录密码不能为空";
+					}else if (upwd.value.length<6)
+					{
+						p2.innerHTML="登录密码长度应在6-20之间"
+					}else{p2.innerHTML="正常"}
+				
+				}
+				function cn(){
+					if (!upwd.value===upwd2.value)
+					{
+					p3.innerHTML="两次输入的密码不一致"
+					}
+				
+				}
+
+				function reg(){
+/*1.创建异步对象
+2.创建请求
+3.发送请求
+4.接受响应数据
+*/
+			var xhr=new XMLHttpRequest();
+			xhr.onreadystatechange=function(){
+				if (xhr.readyState==4&&xhr.status==200)
+				{
+					var result=xhr.responseText;
+					alert(result)
+				}
+			}
+				xhr.open("post","/user/reg",true);
+
+				xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+				var formdata="uname="+uname.value+"&upwd="+upwd.value;
+				xhr.send(formdata)
+				
+				}
+			
+			</script>
+		
+	</body>
+
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
