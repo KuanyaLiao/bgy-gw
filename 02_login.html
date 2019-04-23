@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+	</head>
+	<body>
+	<div>
+	<table>
+		<tr>
+			<td>账号登录</td>
+		</tr>
+		<tr>
+			<td><input type="text" id="uname"></td>
+		</tr>
+		<tr>
+			<td><input type="text" id="upwd"></td>
+		</tr>
+		<tr>
+			<td><button onclick="show()">登录</button></td>
+		</tr>
+		<tr>
+			<td><a href="">会员注册</a>|<a href="">忘记密码</a></td>
+		</tr>
+	</table>
+	</div>
+		<script>
+		function show(){
+/*1.创建异步对象
+2.创建请求
+3.发送请求
+4.接受响应数据
+*/
+			var xhr=new XMLHttpRequest();
+			xhr.onreadystatechange=function(){
+				if (xhr.readyState==4&xhr.status==200)
+				{
+					var result=xhr.responseText;
+					alert(result);
+				}
+			
+			}
+			xhr.open("post","user/login",true);
+			xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+			var formdata="uname="+uname.value+"&upwd="+upwd.value
+			xhr.send(formdata)
+		}
+		
+		</script>
+
+	</body>
+
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
