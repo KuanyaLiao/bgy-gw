@@ -9,7 +9,6 @@
  * 构造列表的自定义使用方法
  -----------------------
 
- * @method yo-tip
 
 
  * @param {default | Length} $radius 定义yo-tip圆角
@@ -47,6 +46,8 @@
         @content;
     }
 }
+
+
 
 // 调用本文件时载入tip基础构造
 .yo-tip {
